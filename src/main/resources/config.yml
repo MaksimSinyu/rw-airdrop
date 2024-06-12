@@ -1,0 +1,51 @@
+airdrop:
+  spawnMessage:
+    - '&6Аирдроп &7» &fПоявился %name%'
+    - '&6Аирдроп &7» &fНаграда за открытие:'
+  openingDelay: 300
+  types:
+    legendary: "&6&lЛегендарный АирДроп"
+    mythical: "&c&lМифический АирДроп"
+    rare: "&9&lРедкий АирДроп"
+    default: "&2&lОбычный АирДроп"
+  hologram:
+    beforeOpen: "&a&lАирДроп доступен"
+    killBoss: "&7Для открытия победите босса!"
+    airdropClosed: "{airdropType}: &cзакрыт"
+    killedBoss: "&7Открытие через &e{seconds} &7сек"
+  schematic:
+    name: "air1.schem"
+  region:
+    region-blocks-size: 104 # Для создания региона 208x208 блоков
+    block-cmds:
+      - home
+      - spawn
+      - kit
+  touch: "&6АирДроп &7» &cДействие невозможно. Дождитесь конца АирДропа"
+
+commands:
+  helpMessage:
+    - '&6Аирдроп &7» &fСписок доступных команд:'
+    - '&6Аирдроп &7» &f/loseair spawn {x} {y} {z} &7- &eЗаспавнить аирдроп на указанных координатах'
+    - '&6Аирдроп &7» &f/loseair open {airdropType} &7- &eОткрыть аирдроп указанного типа'
+  openMessage:
+    - '&6Аирдроп &7» &fОткрытие аирдропа:'
+    - '&6Аирдроп &7» &fТип: {airdropType}'
+  reloadMessage:
+    - '&6Аирдроп &7» &fКонфигурация успешно перезагружена.'
+  hasntPermission: "&6Аирдроп &7» &cУ вас нет прав."
+  successRemove: '&6Аирдроп &7» &fАирдроп &eудалён.'
+  noActiveAirdrop: '&6Аирдроп &7» &cНет активного аирдропа.'
+
+boss:
+  types:
+    - poseidon
+
+poseidon:
+  name: "&b[Посейдон]"
+  hp: 2000
+
+bossBar:
+  titleBoss: "{type} &8&l| &cБосс не убит &8&l| &bx: &7{x_cords} &bz: &7{z_cords}"
+  titleClicked: "{type} &8&l| &eОткрытие через &7{seconds} &eсек &8&l| &bx: &7{x_cord} &bz: &7{z_cord}"
+  titleOpened: "{type} &8&l| &aОткрыт &8&l| &bx: &7{x_cords} &bz: &7{z_cords}"

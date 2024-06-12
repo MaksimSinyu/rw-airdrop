@@ -1,0 +1,33 @@
+name: LoseAirDrop
+version: '${project.version}'
+main: org.freeze.loseairdrop.LoseAirDrop
+api-version: '1.13'
+depend: [DecentHolograms, WorldGuard]
+
+commands:
+  loseair:
+    description: Main command for LoseAirDrop
+    usage: /loseair <help|spawn|open|reload|remove|kill>
+    aliases: [la]
+permissions:
+  loseair.use:
+    description: Allows use of the loseair command
+    default: op
+  loseair.spawn:
+    description: Allows use of the spawn subcommand
+    default: op
+  loseair.open:
+    description: Allows use of the open subcommand
+    default: true
+  loseair.reload:
+    description: Allows use of the reload subcommand
+    default: op
+  loseair.help:
+    description: Allows use of the help subcommand
+    default: op
+  loseair.remove:
+    description: Allows use of the remove subcommand
+    default: op
+  loseair.kill:
+    description: Allows use of the kill subcommand
+    default: op
